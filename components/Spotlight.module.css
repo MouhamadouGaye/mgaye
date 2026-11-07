@@ -1,0 +1,10 @@
+.card { --x: 50%; --y: 50%; --rx: 0deg; --ry: 0deg; position: relative; height: 100%; border-radius: var(--radius); overflow: hidden;
+  transform: perspective(900px) rotateX(var(--rx)) rotateY(var(--ry)); transition: transform .5s var(--ease), box-shadow .5s var(--ease); }
+.card::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .4s;
+  background: radial-gradient(380px circle at var(--x) var(--y), var(--spot, rgba(43,89,255,.16)), transparent 65%); }
+.card:hover::before { opacity: 1; }
+.card::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; padding: 1px; opacity: 0; transition: opacity .4s;
+  background: radial-gradient(260px circle at var(--x) var(--y), var(--edge, var(--cobalt)), transparent 70%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+.card:hover::after { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .card { transform: none !important; } }

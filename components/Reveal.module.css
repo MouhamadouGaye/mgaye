@@ -1,0 +1,4 @@
+.r { opacity: 0; filter: blur(14px); transform: translateY(28px) scale(.97); clip-path: inset(0 0 40% 0 round 12px);
+  transition: opacity .9s var(--ease) var(--d), filter .9s var(--ease) var(--d), transform 1s var(--ease) var(--d), clip-path 1.1s var(--ease) var(--d); }
+.in { opacity: 1; filter: blur(0); transform: none; clip-path: inset(-10% -5% -10% -5% round 12px); }
+@media (prefers-reduced-motion: reduce) { .r { opacity: 1; filter: none; transform: none; clip-path: none; transition: none; } }

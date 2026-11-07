@@ -1,0 +1,19 @@
+.article { padding: 150px 24px 100px; max-width: 760px; margin-inline: auto; }
+.header { animation: in 1s var(--ease) both; }
+.back { color: var(--muted); font-size: .95rem; transition: color .3s; }
+.back:hover { color: var(--cobalt); }
+.cat { display: block; margin: 40px 0 14px; color: var(--cobalt); font-weight: 600; }
+.header h1 { font-size: clamp(2.2rem, 5.5vw, 4rem); line-height: 1.02; letter-spacing: -.035em; margin: 0 0 20px; }
+.meta { color: var(--muted); margin: 0 0 56px; }
+.body { font-family: var(--font-serif), Georgia, serif; font-size: 1.3rem; line-height: 1.75; }
+.body p { margin: 0 0 1.5em; animation: in 1s var(--ease) both; }
+.body p:first-child::first-letter { float: left; font-size: 4.4em; line-height: .85; padding: .06em .12em 0 0; font-weight: 600; color: var(--cobalt); }
+.more { margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--mist); }
+.more h2 { font-size: 1.1rem; margin: 0 0 16px; }
+.more li { margin-bottom: 10px; }
+.more li a { font-weight: 500; border-bottom: 1px solid var(--mist); transition: border-color .3s, color .3s; }
+.more li a:hover { color: var(--cobalt); border-color: var(--cobalt); }
+.cta { display: inline-block; margin-top: 32px; padding: 16px 28px; border-radius: 999px; background: var(--cobalt); color: #fff; font-weight: 600; transition: transform .35s var(--ease); }
+.cta:hover { transform: translateY(-3px); }
+@keyframes in { from { opacity: 0; transform: translateY(20px); filter: blur(6px); } }
+@supports (animation-timeline: view()) { .body p { animation: in linear both; animation-timeline: view(); animation-range: entry 0% entry 40%; } }

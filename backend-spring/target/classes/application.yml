@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/portfolio}
+    username: ${SPRING_DATASOURCE_USERNAME:portfolio}
+    password: ${SPRING_DATASOURCE_PASSWORD:portfolio}
+  jpa:
+    hibernate:
+      ddl-auto: update   # en production, utiliser Flyway ou Liquibase
+    open-in-view: false
+app:
+  cors-origins: ${CORS_ORIGINS:http://localhost:3000,https://mouhamadougaye.com}

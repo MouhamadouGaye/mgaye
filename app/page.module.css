@@ -1,0 +1,21 @@
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 20px 0 110px; }
+.stat { padding-top: 22px; border-top: 2px solid var(--midnight); }
+.stat b { display: block; font-size: clamp(3rem, 6vw, 5rem); letter-spacing: -.04em; line-height: 1; font-variant-numeric: tabular-nums; }
+.stat span { display: block; margin-top: 10px; color: var(--muted); max-width: 28ch; }
+.blog { padding: 130px 0; background: var(--paper); }
+.blogHead { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 56px; }
+.blogHead h2 { font-size: clamp(2rem, 4vw, 3.4rem); letter-spacing: -.03em; margin: 0; }
+.all { padding-bottom: 4px; border-bottom: 2px solid var(--cobalt); font-weight: 600; transition: color .3s; }
+.all:hover { color: var(--cobalt); }
+.posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.post { display: flex; flex-direction: column; gap: 12px; height: 100%; padding: 32px; border-radius: 22px; background: var(--porcelain); transition: transform .5s var(--ease), box-shadow .5s; }
+.post:hover { transform: translateY(-8px); box-shadow: 0 34px 50px -28px rgba(11,27,58,.4); }
+.cat { color: var(--cobalt); font-weight: 600; font-size: .9rem; }
+.post h3 { margin: 0; font-size: 1.5rem; letter-spacing: -.02em; line-height: 1.15; }
+.post p { margin: 0; color: var(--muted); line-height: 1.6; flex: 1; }
+.post small { color: var(--muted); }
+.contact { padding: 130px 0; background: var(--midnight); color: #fff; }
+.contactGrid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 80px; align-items: start; }
+.contact h2 { font-size: clamp(2.2rem, 4.4vw, 3.8rem); line-height: 1.02; letter-spacing: -.03em; margin: 0 0 20px; }
+.contact p { color: #B7C3E4; font-size: 1.1rem; line-height: 1.6; margin: 0 0 32px; max-width: 44ch; }
+@media (max-width: 900px) { .stats, .posts, .contactGrid { grid-template-columns: 1fr; } .contactGrid { gap: 48px; } .blog, .contact { padding: 90px 0; } }
