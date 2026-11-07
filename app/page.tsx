@@ -17,7 +17,9 @@ export default function Home() {
       <section className={`wrap ${s.stats}`}>
         {stats.map((x, i) => (
           <Reveal key={x.label} delay={i * 100} className={s.stat}>
-            <b><Counter to={x.value} suffix={x.suffix} /></b>
+            <b>
+              <Counter to={x.value} suffix={x.suffix} />
+            </b>
             <span>{x.label}</span>
           </Reveal>
         ))}
@@ -32,7 +34,9 @@ export default function Home() {
         <div className="wrap">
           <Reveal className={s.blogHead}>
             <h2>Derniers articles</h2>
-            <Link href="/blog" className={s.all}>Tous les articles</Link>
+            <Link href="/blog" className={s.all}>
+              Tous les articles
+            </Link>
           </Reveal>
           <ul className={s.posts}>
             {posts.map((p, i) => (
@@ -41,7 +45,14 @@ export default function Home() {
                   <span className={s.cat}>{p.category}</span>
                   <h3>{p.title}</h3>
                   <p>{p.excerpt}</p>
-                  <small>{new Date(p.date).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}, {p.readTime} de lecture</small>
+                  <small>
+                    {new Date(p.date).toLocaleDateString("fr-FR", {
+                      day: "numeric",
+                      month: "long",
+                      year: "numeric",
+                    })}
+                    , {p.readTime} de lecture
+                  </small>
                 </Link>
               </Reveal>
             ))}
@@ -53,10 +64,17 @@ export default function Home() {
         <div className={`wrap ${s.contactGrid}`}>
           <Reveal>
             <h2>Parlons de votre projet</h2>
-            <p>Décrivez votre besoin en quelques lignes. Je vous réponds sous 48 h avec une première analyse et une proposition de cadrage.</p>
-            <Magnetic href={`mailto:${profile.email}`} className="light">{profile.email}</Magnetic>
+            <p>
+              Décrivez votre besoin en quelques lignes. Je vous réponds sous 48
+              h avec une première analyse et une proposition de cadrage.
+            </p>
+            <Magnetic href={`mailto:${profile.email}`} className="light">
+              {profile.email}
+            </Magnetic>
           </Reveal>
-          <Reveal delay={150}><ContactForm /></Reveal>
+          <Reveal delay={150}>
+            <ContactForm />
+          </Reveal>
         </div>
       </section>
     </>
