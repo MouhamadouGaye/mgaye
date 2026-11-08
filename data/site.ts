@@ -20,7 +20,8 @@ export const profile: Profile = {
   headline:
     "On conçoit les outils financiers que vos équipes utilisent vraiment.",
   intro:
-    "MBA en finance, développeur JavaScript, Python et Java. Je conçois et j’édite SenFile, une suite d’applications en ligne (documents, tableur, visioconférence, affiches), et j’aide les entreprises à bâtir leurs propres outils.",
+    // "MBA en finance, développeur JavaScript, Python et Java. Je conçois et j’édite SenFile, une suite d’applications en ligne (documents, tableur, visioconférence, affiches), et j’aide les entreprises à bâtir leurs propres outils.",
+    "MBA en finance, développeur senior maîtrisant JavaScript, Python et Java, il associe expertise financière et compétences technologiques. Concepteur et éditeur de **SenFile**, une suite d’applications en ligne intégrant des outils de traitement documentaire, de tableur, de visioconférence et de création graphique, il accompagne également les entreprises dans la conception et le développement de solutions numériques sur mesure, adaptées à leurs besoins et à leurs ambitions.",
   email: "contact@mouhamadougaye.com", // TODO
   availability: "Disponible pour de nouvelles missions",
   socials: [
