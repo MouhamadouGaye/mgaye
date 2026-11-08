@@ -25,7 +25,7 @@ export const profile: Profile = {
   availability: "Disponible pour de nouvelles missions",
   socials: [
     { label: "LinkedIn", href: "https://www.linkedin.com/" }, // TODO
-    { label: "GitHub", href: "https://github.com/" }, // TODO
+    { label: "GitHub", href: "https://github.com/MouhamadouGaye" }, // TODO
   ],
 };
 
