@@ -15,7 +15,7 @@ import type {
 
 export const profile: Profile = {
   name: "Mouhamadou Gaye",
-  status: "Auto-entrepreneur",
+  status: "Entrepreneur",
   role: "Ingénieur financier & logiciel",
   headline:
     "On conçoit les outils financiers que vos équipes utilisent vraiment.",
