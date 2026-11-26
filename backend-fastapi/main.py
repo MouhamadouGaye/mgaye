@@ -124,7 +124,7 @@ from sqlalchemy import DateTime, Integer, String, Text, create_engine, select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+psycopg://user:pass@localhost:5432/portfolio")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+psycopg://gaye:Postgres.2424@localhost:5432/portfolio")
 engine = create_engine(DATABASE_URL, pool_pre_ping=True)
 
 
@@ -232,7 +232,7 @@ def health():
 #         db.commit()
 #     return {"ok": True}
 
-@app.post("/contacts", status_code=201)
+@app.post("/api/contacts", status_code=201)
 def create_contact(
     c: ContactIn,
     _: bool = Depends(verify_api_key)

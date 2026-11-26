@@ -13,7 +13,7 @@ export default function ContactForm() {
     const form = e.currentTarget;
     setState({ status: "loading", msg: "" });
     try {
-      const res = await fetch("https://api.mouhamadougaye.com/api/contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(Object.fromEntries(new FormData(form))),
