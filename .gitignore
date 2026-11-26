@@ -1,5 +1,9 @@
 node_modules
 .next
 .env
+.env.prod
 backend/.venv
 __pycache__
+backend-fastapi/deploy.sh.debian
+backend-fastapi/deploy.txt
+backend-fastapi/deploy.sh
