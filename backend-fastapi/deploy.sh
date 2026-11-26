@@ -122,13 +122,24 @@ echo
 read -r -p "Adresse e-mail pour les certificats HTTPS Let's Encrypt : " ADMIN_EMAIL
 [[ "$ADMIN_EMAIL" == *@* ]] || fail "Adresse e-mail invalide."
 
+# echo
+# read -r -s -p "DATABASE_URL de ta base PostgreSQL : " DATABASE_URL
+# echo
+
 echo
-read -r -s -p "DATABASE_URL de ta base PostgreSQL : " DATABASE_URL
+read -r -p "DATABASE_URL de ta base PostgreSQL : " DATABASE_URL
 echo
 [[ -n "$DATABASE_URL" ]] || fail "DATABASE_URL obligatoire."
 
-if [[ "$DATABASE_URL" != postgres://* && "$DATABASE_URL" != postgresql://* ]]; then
-  fail "DATABASE_URL doit commencer par postgres:// ou postgresql://."
+# if [[ "$DATABASE_URL" != postgres://* && "$DATABASE_URL" != postgresql://* ]]; then
+#   fail "DATABASE_URL doit commencer par postgres:// ou postgresql://."
+# fi
+
+if [[ "$DATABASE_URL" != postgres://* \
+   && "$DATABASE_URL" != postgresql://* \
+   && "$DATABASE_URL" != postgresql+psycopg://* ]]; then
+  echo "[ERROR] Format DATABASE_URL invalide."
+  exit 1
 fi
 
 # Écrit les valeurs en échappant correctement les caractères shell.
